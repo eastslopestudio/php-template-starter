@@ -17,8 +17,8 @@
   "scripts": {
     "start": "run-s clean watch",
     "clean": "rimraf templates/build",
-    "watch": "run-p --print-label watch:**",
-    "watch:serve": "php -S 127.0.0.1:8000 -t templates/",
+    "watch": "run-p --print-label serve watch:**",
+    "serve": "php -S 127.0.0.1:8000 -t templates/",
     "watch:templates": "browser-sync start --config bs-config.js",
     "watch:css": "postcss resources/css/main.css -o templates/build/main.css --watch",
     "watch:js": "rollup resources/js/main.js --file templates/build/main.js --format iife --compact --watch"
